@@ -1,0 +1,101 @@
+{% extends 'base_main.html' %}
+{% load static %}
+{% block ext_css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'axf/main/css/cart.css' %}">
+{% endblock %}
+
+{% block ext_js %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'axf/main/js/cart.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    <div id="cart">
+        <h3>购物车</h3>
+
+        {#  css高度差限，当容器里面的子元素全部浮动的时候，容器的高度为0。需清除浮动 class='clear'   #}
+        {#        <div style="border: 1px solid orange">#}
+        {#            <h2 style="float: left">hhhhh</h2>#}
+        {#            <div style="float: left">123456798</div>#}
+        {#        </div>#}
+
+        <div class="full">
+            <section>
+                <ul>
+                    <li>
+                        <span>收&nbsp;&nbsp;&nbsp;货&nbsp;&nbsp;&nbsp;人:</span>
+                        <div>
+                            <p>
+                                <span>修改&gt&gt</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>联&nbsp;系&nbsp;方&nbsp;式:</li>
+                    <li>收&nbsp;货&nbsp;地&nbsp;址:</li>
+                </ul>
+
+                <div class="bill">
+                    <p>闪送超市</p>
+                    <p>满100减99</p>
+                    <a href="#">凑单专区</a>
+                </div>
+
+                <div class="delivery">
+                    <span>收货时间</span>
+                    <span>一小时可送达</span>
+                    <a href="#">可预定&gt&gt</a>
+                </div>
+
+                <div class="delivery">
+                    <span>收货备注</span>
+                    <input type="text" placeholder="可输入100字以内的特殊要求">
+                </div>
+
+                <menu>
+                    <ul>
+                        {% for carmodel in carmodels %}
+                            <li class="menuList" cartid="{{ carmodel.id }}">
+                                <div class="confirm">
+                                    <span>
+                                        {% if carmodel.c_goods_select %}
+                                            <sapn class="select">X️</sapn>
+                                        {% endif %}
+                                    </span>
+                                </div>
+                                <a href="#">
+                                    <img src="{{ carmodel.c_goods.productimg }}"
+                                         alt="{{ carmodel.c_goods.productlongname }}">
+                                    <p>{{ carmodel.c_goods.productlongname }}</p>
+                                    <p>{{ carmodel.c_goods.price }}</p>
+                                </a>
+                                <section>
+                                    <button class="subShopping" goodsid="{{ carmodel.c_goods_id }}">-</button>
+                                    <span>0</span>
+                                    <button class="addShopping" goodsid="{{ carmodel.c_goods_id }}">+</button>
+                                </section>
+                            </li>
+                        {% endfor %}
+
+                    </ul>
+                </menu>
+
+
+                <div class="payTheBill">
+                    <div class="confirm">
+                        <span></span>
+                    </div>
+                    <p>
+                        <span>全选</span>
+                        <span>共计：</span>
+                        <span>总价</span>
+                    </p>
+
+                    <span>下单</span>
+
+                </div>
+            </section>
+        </div>
+
+    </div>
+{% endblock %}
