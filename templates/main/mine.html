@@ -5,6 +5,11 @@
     <link rel="stylesheet" href="{% static 'axf/main/css/mine.css' %}">
 {% endblock %}
 
+{% block ext_js %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static '/axf/main/js/mine.js' %}"></script>
+{% endblock %}
+
 {% block content %}
     <div id="mine">
         <div class="fixed">
@@ -50,7 +55,7 @@
             <nav id="nav">
                 <ul>
                     <li>
-                        <dl>
+                        <dl id="wait_pay">
                             <span class="count badge">{{ order_wait_pay }}</span>
                             <dt>
                                 <span class="glyphicon glyphicon-usd"></span>

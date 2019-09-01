@@ -3,3 +3,7 @@ ORDERED = 0
 
 # 已付款
 PAYED = 1
+
+TYPE_ORDER = 0
+
+TYPE_PAYED = 1

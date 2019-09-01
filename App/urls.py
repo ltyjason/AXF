@@ -20,5 +20,6 @@ urlpatterns = [
     path('changecartsstatus/', views.change_carts_status, name='change_carts_status'),
     path('makeorder/', views.make_order, name='make_order'),
     path('orderdetail/', views.order_detail, name='order_detail'),
-    path('alipaycallback/', views.alipay_callback, name='alipay_callback')
+    path('alipaycallback/', views.alipay_callback, name='alipay_callback'),
+    path('orderlist/', views.order_list, name='order_list'),
 ]

@@ -540,3 +540,30 @@ def alipay_callback(request):
     }
 
     return JsonResponse(data)
+
+
+# 展示订单列表
+#   订单列表类型 已付款 已下单 已发货
+
+def order_list(request):
+
+    order_type = request.GET.get('order_type')
+
+    user_id = request.session.get('user_id')
+
+    user = UserModel.objects.get(pk=user_id)
+
+    status = order_status.TYPE_ORDER
+
+    if order_type == order_status.TYPE_ORDER:
+        status = order_status.TYPE_ORDER
+    elif order_type == order_status.TYPE_PAYED:
+        status = order_status.TYPE_PAYED
+
+    orders = OrderModel.objects.filter(o_user=user).filter(o_status=status)
+
+    data = {
+        'orders': orders
+    }
+
+    return render(request, 'main/order_list.html', context=data)
