@@ -1,5 +1,4 @@
 import secrets
-import uuid
 
 from django.core.cache import cache
 
@@ -74,7 +73,6 @@ def market_with_params(request, categoryid, childcid, sort_rule):
     else:
         goods_list = Goods.c_goods_num
 
-
     foodtype = FoodType.objects.get(typeid=categoryid)
 
     childtypenames = foodtype.childtypenames
@@ -116,7 +114,6 @@ def cart(request):
         else:
             total_price += carmodel.c_goods_num * carmodel.c_goods.price
 
-
     data = {
         'title': '购物车',
         'carmodels': carmodels,
@@ -138,11 +135,15 @@ def mine(request):
     }
 
     if user_id:
-        user = UserModel.objects.get(pk=user_id)
-        is_login = True
-        data['is_login'] = is_login
-        data['user_icon'] = '/static/uploads/' + user.u_icon.url
-        data['username'] = user.u_name
+        try:
+            user = UserModel.objects.get(pk=user_id)
+            is_login = True
+            data['is_login'] = is_login
+            data['user_icon'] = '/static/uploads/' + user.u_icon.url
+            data['username'] = user.u_name
+        except Exception as e:
+            print(str(e))
+            del request.session['user_id']
 
     return render(request, 'main/mine.html', context=data)
 
@@ -488,11 +489,14 @@ def order_detail(request):
 
     order_id = request.GET.get('orderid')
 
-    order = OrderModel.objects.get(pk=order_id)
+    data = {}
 
-    data = {
-        'order_no': order_id,
-        'order': order,
-    }
+    try:
+        order = OrderModel.objects.get(pk=order_id)
+
+        data['order_no'] = order_id
+        data['order'] = order
+    except:
+        pass
 
     return render(request, 'main/order_detail.html', context=data)

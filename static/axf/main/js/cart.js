@@ -74,6 +74,8 @@ $(function () {
         // console.log(unselects)
         // console.log(selects)
 
+
+
         if(unselects.length > 0){
         //    将未选中的发送给服务器   使用#号连接每一个元素
             $.getJSON('/axf/changecartsstatus/', {'carts': unselects.join("#"), 'select': true}, function (data) {
@@ -116,7 +118,7 @@ $(function () {
                 console.log(data);
 
                 if (data['status'] == '200'){
-                    window.open('/axf/orderdetail/?orderid=' + data['order'], target='_self');
+                    window.open('/axf/orderdetail/?orderid=' + data['order'], target='_self')
                 }
             })
         }
