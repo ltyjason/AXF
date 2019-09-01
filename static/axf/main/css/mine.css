@@ -148,6 +148,15 @@ footer .mine dd {
 
 .mine_info #nav ul li dl, .mine_info menu ul li dl {
     text-align: center;
+    position: relative;
+}
+
+.mine_info #nav ul li dl .count {
+    color: white;
+    background: red;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 .mine_info #nav ul li dl dt, .mine_info menu ul li dl dt {

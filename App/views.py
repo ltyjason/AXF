@@ -8,6 +8,7 @@ from django.shortcuts import render, redirect
 from django.template import loader
 from django.urls import reverse
 
+from App import order_status
 from App.models import MainWheel, MainNav, MainMustBuy, MainShop, MainMainShow, FoodType, Goods, UserModel, CarModel, \
     OrderModel, OrderGoods
 
@@ -141,6 +142,16 @@ def mine(request):
             data['is_login'] = is_login
             data['user_icon'] = '/static/uploads/' + user.u_icon.url
             data['username'] = user.u_name
+
+            orders = OrderModel.objects.filter(o_user=user).filter(o_status=0)
+
+            sended_count = OrderModel.objects.filter(o_user=user).filter(o_status=order_status.PAYED).count()
+
+            if sended_count > 0:
+                data['order_sended_no'] = sended_count
+
+            data['order_wait_pay'] = orders.count()
+
         except Exception as e:
             print(str(e))
             del request.session['user_id']
@@ -491,12 +502,41 @@ def order_detail(request):
 
     data = {}
 
+    total_price = 0.00
+
+    goods = OrderGoods.objects.filter(o_order_id=order_id)
+
+    for good in goods:
+        total_price += good.o_goods_num * good.o_goods.price
+    print(total_price)
+
+
     try:
         order = OrderModel.objects.get(pk=order_id)
 
         data['order_no'] = order_id
         data['order'] = order
+        data['total_price'] = '{:.2f}'.format(total_price)
     except:
         pass
 
     return render(request, 'main/order_detail.html', context=data)
+
+
+def alipay_callback(request):
+
+    order_no = request.GET.get('order_no')
+
+    order = OrderModel.objects.get(pk=order_no)
+
+    order.o_status = order_status.PAYED
+
+    order.save()
+
+    data = {
+        'msg': 'ok',
+        'status': 200,
+        'order_no': order_no,
+    }
+
+    return JsonResponse(data)
