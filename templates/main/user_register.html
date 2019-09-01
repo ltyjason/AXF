@@ -31,13 +31,13 @@
 
             <div class="form-group">
                 <label for="exampleInputPassword1">确认密码</label>
-                <input type="password" class="form-control" id="u_password_confirm" placeholder="请再次输入密码" accept="jpg,png,jpeg,bnp" onchange="checkFileType(this)">
+                <input type="password" class="form-control" id="u_password_confirm" placeholder="请再次输入密码">
                 <span id="u_password_confirm_info"></span>
             </div>
 
             <div class="form-group">
                 <label for="exampleInputFile">头像</label>
-                <input type="file" id="u_icon" name="u_icon">
+                <input type="file" id="u_icon" name="u_icon"  accept="jpg,png,jpeg,bnp" onchange="checkFileType(this)">
                 <span id="u_icon_info"></span>
             </div>
 

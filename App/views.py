@@ -9,7 +9,8 @@ from django.shortcuts import render, redirect
 from django.template import loader
 from django.urls import reverse
 
-from App.models import MainWheel, MainNav, MainMustBuy, MainShop, MainMainShow, FoodType, Goods, UserModel, CarModel
+from App.models import MainWheel, MainNav, MainMustBuy, MainShop, MainMainShow, FoodType, Goods, UserModel, CarModel, \
+    OrderModel, OrderGoods
 
 ALL_TYPE = '0'
 TOTAL_RULE = '0'
@@ -105,9 +106,22 @@ def cart(request):
 
     carmodels = CarModel.objects.filter(c_user_id=userid)
 
+    is_all_select = True
+
+    total_price = 0.00
+
+    for carmodel in carmodels:
+        if not carmodel.c_goods_select:
+            is_all_select = False
+        else:
+            total_price += carmodel.c_goods_num * carmodel.c_goods.price
+
+
     data = {
         'title': '购物车',
         'carmodels': carmodels,
+        'is_all_select': is_all_select,
+        'total_price': '{:.2f}'.format(total_price),
     }
 
     return render(request, 'main/cart.html', context=data)
@@ -316,6 +330,7 @@ def add_to_cart(request):
             car_model.c_user_id = userid
             car_model.save()
         data['goods_num'] = car_model.c_goods_num
+        data['total_price'] = '{:.2f}'.format(calc_total(request.session.get('user_id'))),
 
     return JsonResponse(data)
 
@@ -347,6 +362,8 @@ def sub_to_cart(request):
                 car_models.delete()
                 data['goods_num'] = 0
 
+            data['total_price'] = '{:.2f}'.format(calc_total(request.session.get('user_id'))),
+
     return JsonResponse(data)
 
 
@@ -360,10 +377,122 @@ def change_cart_status(request):
 
     carmodel.save()
 
+    is_all_select = True
+
+    userid = request.session.get('user_id')
+
+    carmodels = CarModel.objects.filter(c_user_id=userid).filter(c_goods_select=False)
+
+    if carmodels.exists():
+        is_all_select = False
+
     data = {
         'msg': 'ok',
         'status': 200,
-        'select': carmodel.c_goods_select
+        'select': carmodel.c_goods_select,
+        'is_all_select': is_all_select,
+        'total_price': '{:.2f}'.format(calc_total(request.session.get('user_id'))),
     }
 
     return JsonResponse(data)
+
+
+def change_carts_status(request):
+
+    carts = request.GET.get('carts')
+
+    cart_list = carts.split('#')
+
+    # print(cart_list)
+
+    select = request.GET.get('select')
+
+    # print(select)
+    #
+    # print(type(select))
+
+    if select == 'true':
+        is_select = True
+    else:
+        is_select = False
+
+    for cartid in cart_list:
+        carmodel = CarModel.objects.get(pk=cartid)
+        carmodel.c_goods_select = is_select
+        carmodel.save()
+
+    data = {
+        'msg': 'ok',
+        'status': 200,
+        'total_price': '{:.2f}'.format(calc_total(request.session.get('user_id'))),
+    }
+
+    return JsonResponse(data)
+
+
+def calc_total(user_id):
+
+    total_price = 0
+
+    carmodels = CarModel.objects.filter(c_user_id=user_id).filter(c_goods_select=True)
+
+    for carmodel in carmodels:
+        total_price += carmodel.c_goods_num * carmodel.c_goods.price
+
+    return total_price
+
+
+def make_order(request):
+
+    carts = request.GET.get('carts')
+
+    cart_list = carts.split('#')
+
+    print(cart_list)
+
+    order = OrderModel()
+
+    userid = request.session.get('user_id')
+
+    order.o_user = UserModel.objects.get(pk=userid)
+
+    order.save()
+
+    for cartid in cart_list:
+        # 查询购物车的数据
+        carmodel = CarModel.objects.get(pk=cartid)
+        # 创建订单商品数据
+        ordergoods = OrderGoods()
+        # 生成订单号
+        ordergoods.o_order = order
+        # 商品个数
+        ordergoods.o_goods_num = carmodel.c_goods_num
+        # 商品信息
+        ordergoods.o_goods = carmodel.c_goods
+
+        ordergoods.save()
+
+        carmodel.delete()
+
+    data = {
+        'mas': 'ok',
+        'status': 200,
+        'order': order.id
+
+    }
+
+    return JsonResponse(data)
+
+
+def order_detail(request):
+
+    order_id = request.GET.get('orderid')
+
+    order = OrderModel.objects.get(pk=order_id)
+
+    data = {
+        'order_no': order_id,
+        'order': order,
+    }
+
+    return render(request, 'main/order_detail.html', context=data)

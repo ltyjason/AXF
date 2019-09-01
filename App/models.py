@@ -171,3 +171,24 @@ class CarModel(models.Model):
     c_goods_num = models.IntegerField(default=1)
 
     c_goods_select = models.BooleanField(default=True)
+
+
+class OrderModel(models.Model):
+
+    o_user = models.ForeignKey(UserModel, on_delete=models.CASCADE)
+
+    # 订单状态 0：已下单，未付款 1：已下单，已付款，未发货 2：已下单，已付款，已发货，未收货
+    o_status = models.IntegerField(default=0)
+
+    o_time = models.DateTimeField(auto_now=True)
+
+
+class OrderGoods(models.Model):
+
+    o_order = models.ForeignKey(OrderModel, on_delete=models.CASCADE)
+
+    o_goods = models.ForeignKey(Goods, on_delete=models.CASCADE)
+
+    o_goods_num = models.IntegerField(default=1)
+
+

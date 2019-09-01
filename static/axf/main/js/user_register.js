@@ -103,7 +103,7 @@ function checkFileType(_this) {
     } else {
         $this.attr('value', '');
         alert('请选择' + acceptType + '格式文件');
-        return;
+        return false;
     }
 }
 

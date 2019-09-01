@@ -57,9 +57,11 @@
                         {% for carmodel in carmodels %}
                             <li class="menuList" cartid="{{ carmodel.id }}">
                                 <div class="confirm">
-                                    <span>
+                                    <span class="first_selsect">
                                         {% if carmodel.c_goods_select %}
-                                            <sapn class="select">X️</sapn>
+                                            <sapn class="selsect"️️>✔️</sapn>
+                                            {% else %}
+                                            <sapn class="selsect">️</sapn>
                                         {% endif %}
                                     </span>
                                 </div>
@@ -71,7 +73,7 @@
                                 </a>
                                 <section>
                                     <button class="subShopping" goodsid="{{ carmodel.c_goods_id }}">-</button>
-                                    <span>0</span>
+                                    <span>{{ carmodel.c_goods_num }}</span>
                                     <button class="addShopping" goodsid="{{ carmodel.c_goods_id }}">+</button>
                                 </section>
                             </li>
@@ -82,16 +84,22 @@
 
 
                 <div class="payTheBill">
-                    <div class="confirm">
-                        <span></span>
+                    <div class="all_select">
+                        <span>
+                            {% if is_all_select %}
+                                <span>✔️</span>
+                                {% else %}
+                                <span></span>
+                            {% endif %}
+                        </span>
                     </div>
                     <p>
                         <span>全选</span>
                         <span>共计：</span>
-                        <span>总价</span>
+                        <span id="total_price">{{ total_price }}</span>
                     </p>
 
-                    <span>下单</span>
+                    <span id="make_order">下单</span>
 
                 </div>
             </section>

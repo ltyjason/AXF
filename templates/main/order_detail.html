@@ -1,0 +1,23 @@
+{% extends 'base_order.html' %}
+
+{% block content %}
+
+    <div class="container">
+
+        <h3>订单编号:{{ order_no }}</h3>
+
+        <ul>
+            {#    order 订单数据    #}
+            {#    订单 和 订单商品是一对多的关系        #}
+            {% for ordergoods in order.ordergoods_set.all %}
+                <li>
+                    <img src="{{ ordergoods.o_goods.productimg }}">
+                    <span>{{ ordergoods.o_goods_num }}</span>
+                </li>
+            {% endfor %}
+
+        </ul>
+
+    </div>
+
+{% endblock %}
