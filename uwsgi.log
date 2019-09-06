@@ -1,0 +1,627 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Mon Sep  2 20:22:27 2019] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 10.0.1 (clang-1001.0.46.4) on 02 September 2019 06:01:04
+os: Darwin-18.0.0 Darwin Kernel Version 18.0.0: Wed Aug 22 20:13:40 PDT 2018; root:xnu-4903.201.2~1/RELEASE_X86_64
+nodename: MacBook-Pro.local
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /Users/jason/env/Djgo/Djgo7/AXF
+writing pidfile to uwsgi.pid
+detected binary path: /Users/jason/.virtualenvs/Djgo/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /Users/jason/env/Djgo/Djgo7/AXF
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 10240
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8033 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:52686 (port auto-assigned) fd 3
+Python version: 3.7.4 (default, Jul  9 2019, 18:13:23)  [Clang 10.0.1 (clang-1001.0.46.4)]
+Python main interpreter initialized at 0x7f8766d02590
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 937440 bytes (915 KB) for 32 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7f8766d02590 pid: 30056 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 30056)
+spawned uWSGI worker 1 (pid: 30084, cores: 4)
+spawned uWSGI worker 2 (pid: 30085, cores: 4)
+spawned uWSGI worker 3 (pid: 30086, cores: 4)
+spawned uWSGI worker 4 (pid: 30087, cores: 4)
+spawned uWSGI worker 5 (pid: 30088, cores: 4)
+spawned uWSGI worker 6 (pid: 30089, cores: 4)
+spawned uWSGI worker 7 (pid: 30090, cores: 4)
+spawned uWSGI worker 8 (pid: 30091, cores: 4)
+spawned uWSGI http 1 (pid: 30092)
+[pid: 30089|app: 0|req: 1/1] 127.0.0.1 () {44 vars in 933 bytes} [Mon Sep  2 20:22:40 2019] GET /axf/home/ => generated 27 bytes in 199 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+[pid: 30088|app: 0|req: 1/2] 127.0.0.1 () {42 vars in 851 bytes} [Mon Sep  2 20:22:41 2019] GET /favicon.ico => generated 77 bytes in 33 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 30088|app: 0|req: 2/3] 127.0.0.1 () {46 vars in 964 bytes} [Mon Sep  2 20:22:42 2019] GET /axf/home/ => generated 27 bytes in 132 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 2)
+[pid: 30091|app: 0|req: 1/4] 127.0.0.1 () {36 vars in 592 bytes} [Mon Sep  2 20:22:52 2019] GET / => generated 77 bytes in 26 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 30091|app: 0|req: 2/5] 127.0.0.1 () {36 vars in 557 bytes} [Mon Sep  2 20:22:52 2019] GET /favicon.ico => generated 77 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 3)
+gateway "uWSGI http 1" has been buried (pid: 30092)
+...brutally killing workers...
+worker 8 buried after 2 seconds
+worker 7 buried after 2 seconds
+worker 6 buried after 2 seconds
+worker 5 buried after 2 seconds
+worker 4 buried after 2 seconds
+worker 3 buried after 2 seconds
+worker 2 buried after 2 seconds
+worker 1 buried after 2 seconds
+binary reloading uWSGI...
+chdir() to /Users/jason/env/Djgo/Djgo7/AXF
+closing all non-uwsgi socket fds > 2 (max_fd = 10240)...
+found fd 3 mapped to socket 0 (127.0.0.1:52686)
+running /Users/jason/.virtualenvs/Djgo/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Mon Sep  2 20:23:19 2019] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 10.0.1 (clang-1001.0.46.4) on 02 September 2019 06:01:04
+os: Darwin-18.0.0 Darwin Kernel Version 18.0.0: Wed Aug 22 20:13:40 PDT 2018; root:xnu-4903.201.2~1/RELEASE_X86_64
+nodename: MacBook-Pro.local
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /Users/jason/env/Djgo/Djgo7/AXF
+detected binary path: /Users/jason/.virtualenvs/Djgo/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /Users/jason/env/Djgo/Djgo7/AXF
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 10240
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8033 fd 5
+uwsgi socket 0 bound to TCP address 127.0.0.1:52781 (port auto-assigned) fd 4
+Python version: 3.7.4 (default, Jul  9 2019, 18:13:23)  [Clang 10.0.1 (clang-1001.0.46.4)]
+Python main interpreter initialized at 0x7fdfcdc0a220
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 937440 bytes (915 KB) for 32 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7fdfcdc0a220 pid: 30056 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 30056)
+spawned uWSGI worker 1 (pid: 30119, cores: 4)
+spawned uWSGI worker 2 (pid: 30120, cores: 4)
+spawned uWSGI worker 3 (pid: 30121, cores: 4)
+spawned uWSGI worker 4 (pid: 30122, cores: 4)
+spawned uWSGI worker 5 (pid: 30123, cores: 4)
+spawned uWSGI worker 6 (pid: 30124, cores: 4)
+spawned uWSGI worker 7 (pid: 30125, cores: 4)
+spawned uWSGI worker 8 (pid: 30126, cores: 4)
+spawned uWSGI http 1 (pid: 30127)
+*** Starting uWSGI 2.0.18 (64bit) on [Mon Sep  2 20:50:34 2019] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 10.0.1 (clang-1001.0.46.4) on 02 September 2019 06:01:04
+os: Darwin-18.0.0 Darwin Kernel Version 18.0.0: Wed Aug 22 20:13:40 PDT 2018; root:xnu-4903.201.2~1/RELEASE_X86_64
+nodename: MacBook-Pro.local
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /Users/jason/env/Djgo/Djgo7/AXF
+writing pidfile to uwsgi.pid
+detected binary path: /Users/jason/.virtualenvs/Djgo/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /Users/jason/env/Djgo/Djgo7/AXF
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 10240
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8000 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:49229 (port auto-assigned) fd 3
+Python version: 3.7.4 (default, Jul  9 2019, 18:13:23)  [Clang 10.0.1 (clang-1001.0.46.4)]
+Python main interpreter initialized at 0x7f930d9022b0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 937440 bytes (915 KB) for 32 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7f930d9022b0 pid: 929 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 929)
+spawned uWSGI worker 1 (pid: 957, cores: 4)
+spawned uWSGI worker 2 (pid: 958, cores: 4)
+spawned uWSGI worker 3 (pid: 959, cores: 4)
+spawned uWSGI worker 4 (pid: 960, cores: 4)
+spawned uWSGI worker 5 (pid: 961, cores: 4)
+spawned uWSGI worker 6 (pid: 962, cores: 4)
+spawned uWSGI worker 7 (pid: 963, cores: 4)
+spawned uWSGI worker 8 (pid: 964, cores: 4)
+spawned uWSGI http 1 (pid: 965)
+[pid: 964|app: 0|req: 1/1] 127.0.0.1 () {42 vars in 851 bytes} [Mon Sep  2 20:50:57 2019] GET /favicon.ico => generated 77 bytes in 76 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 963|app: 0|req: 1/2] 127.0.0.1 () {46 vars in 964 bytes} [Mon Sep  2 20:50:58 2019] GET /axf/home/ => generated 27 bytes in 314 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+[pid: 964|app: 0|req: 2/3] 127.0.0.1 () {46 vars in 964 bytes} [Mon Sep  2 20:51:00 2019] GET /axf/home/ => generated 27 bytes in 158 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 3)
+[pid: 962|app: 0|req: 1/4] 127.0.0.1 () {46 vars in 964 bytes} [Mon Sep  2 20:51:00 2019] GET /axf/home/ => generated 27 bytes in 230 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+[pid: 962|app: 0|req: 2/5] 127.0.0.1 () {46 vars in 964 bytes} [Mon Sep  2 20:51:01 2019] GET /axf/home/ => generated 27 bytes in 105 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 1)
+[pid: 963|app: 0|req: 2/6] 127.0.0.1 () {46 vars in 957 bytes} [Mon Sep  2 23:37:34 2019] GET /axf/home/ => generated 27 bytes in 104 msecs (HTTP/1.1 500) 4 headers in 126 bytes (2 switches on core 3)
+*** Starting uWSGI 2.0.18 (64bit) on [Mon Sep  2 23:55:31 2019] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 10.0.1 (clang-1001.0.46.4) on 02 September 2019 06:01:04
+os: Darwin-18.0.0 Darwin Kernel Version 18.0.0: Wed Aug 22 20:13:40 PDT 2018; root:xnu-4903.201.2~1/RELEASE_X86_64
+nodename: MacBook-Pro.local
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /Users/jason/env/Djgo/Djgo7/AXF
+writing pidfile to uwsgi.pid
+detected binary path: /Users/jason/.virtualenvs/Djgo/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /Users/jason/env/Djgo/Djgo7/AXF
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 10240
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8000).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.18 (64bit) on [Mon Sep  2 23:55:43 2019] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 10.0.1 (clang-1001.0.46.4) on 02 September 2019 06:01:04
+os: Darwin-18.0.0 Darwin Kernel Version 18.0.0: Wed Aug 22 20:13:40 PDT 2018; root:xnu-4903.201.2~1/RELEASE_X86_64
+nodename: MacBook-Pro.local
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /Users/jason/env/Djgo/Djgo7/AXF
+writing pidfile to uwsgi.pid
+detected binary path: /Users/jason/.virtualenvs/Djgo/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /Users/jason/env/Djgo/Djgo7/AXF
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 10240
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8001 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:50918 (port auto-assigned) fd 3
+Python version: 3.7.4 (default, Jul  9 2019, 18:13:23)  [Clang 10.0.1 (clang-1001.0.46.4)]
+Python main interpreter initialized at 0x7fb06fd04910
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 937440 bytes (915 KB) for 32 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7fb06fd04910 pid: 1789 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1789)
+spawned uWSGI worker 1 (pid: 1815, cores: 4)
+spawned uWSGI worker 2 (pid: 1816, cores: 4)
+spawned uWSGI worker 3 (pid: 1817, cores: 4)
+spawned uWSGI worker 4 (pid: 1818, cores: 4)
+spawned uWSGI worker 5 (pid: 1819, cores: 4)
+spawned uWSGI worker 6 (pid: 1820, cores: 4)
+spawned uWSGI worker 7 (pid: 1821, cores: 4)
+spawned uWSGI worker 8 (pid: 1822, cores: 4)
+spawned uWSGI http 1 (pid: 1823)
+[pid: 963|app: 0|req: 3/7] 127.0.0.1 () {46 vars in 957 bytes} [Mon Sep  2 23:56:09 2019] GET /axf/home/ => generated 23753 bytes in 80 msecs (HTTP/1.1 200) 3 headers in 111 bytes (2 switches on core 1)
+[pid: 962|app: 0|req: 3/9] 127.0.0.1 () {44 vars in 880 bytes} [Mon Sep  2 23:56:09 2019] GET /static/css/bootstrap.css => generated 77 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 964|app: 0|req: 3/9] 127.0.0.1 () {44 vars in 874 bytes} [Mon Sep  2 23:56:09 2019] GET /static/css/swiper.css => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 964|app: 0|req: 4/10] 127.0.0.1 () {44 vars in 888 bytes} [Mon Sep  2 23:56:09 2019] GET /static/axf/main/css/main.css => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 3)
+[pid: 962|app: 0|req: 4/11] 127.0.0.1 () {44 vars in 886 bytes} [Mon Sep  2 23:56:09 2019] GET /static/axf/main/css/home.css => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 962|app: 0|req: 5/12] 127.0.0.1 () {44 vars in 860 bytes} [Mon Sep  2 23:56:09 2019] GET /static/js/bootstrap.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 963|app: 0|req: 4/13] 127.0.0.1 () {44 vars in 868 bytes} [Mon Sep  2 23:56:09 2019] GET /static/axf/main/js/home.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 964|app: 0|req: 6/15] 127.0.0.1 () {44 vars in 850 bytes} [Mon Sep  2 23:56:09 2019] GET /static/js/base.js => generated 77 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 0)
+[pid: 964|app: 0|req: 6/15] 127.0.0.1 () {44 vars in 868 bytes} [Mon Sep  2 23:56:09 2019] GET /static/js/swiper.jquery.js => generated 77 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 960|app: 0|req: 2/16] 127.0.0.1 () {44 vars in 872 bytes} [Mon Sep  2 23:56:09 2019] GET /static/css/reset.css => generated 77 bytes in 59 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 960|app: 0|req: 2/17] 127.0.0.1 () {44 vars in 853 bytes} [Mon Sep  2 23:56:09 2019] GET /static/js/jquery.js => generated 77 bytes in 12 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 1819|app: 0|req: 1/1] 127.0.0.1 () {44 vars in 930 bytes} [Mon Sep  2 23:56:13 2019] GET /axf/home => generated 0 bytes in 24 msecs (HTTP/1.1 301) 3 headers in 115 bytes (1 switches on core 0)
+[pid: 1822|app: 0|req: 1/2] 127.0.0.1 () {44 vars in 932 bytes} [Mon Sep  2 23:56:13 2019] GET /axf/home/ => generated 23753 bytes in 84 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 1822|app: 0|req: 3/4] 127.0.0.1 () {42 vars in 847 bytes} [Mon Sep  2 23:56:13 2019] GET /static/css/reset.css => generated 77 bytes in 8 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 1822|app: 0|req: 3/4] 127.0.0.1 () {42 vars in 863 bytes} [Mon Sep  2 23:56:13 2019] GET /static/axf/main/css/home.css => generated 77 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 1819|app: 0|req: 3/6] 127.0.0.1 () {42 vars in 849 bytes} [Mon Sep  2 23:56:13 2019] GET /static/css/swiper.css => generated 77 bytes in 36 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 1819|app: 0|req: 3/6] 127.0.0.1 () {42 vars in 855 bytes} [Mon Sep  2 23:56:13 2019] GET /static/css/bootstrap.css => generated 77 bytes in 37 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 1820|app: 0|req: 3/7] 127.0.0.1 () {42 vars in 836 bytes} [Mon Sep  2 23:56:13 2019] GET /static/js/bootstrap.js => generated 77 bytes in 25 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 1820|app: 0|req: 3/9] 127.0.0.1 () {42 vars in 863 bytes} [Mon Sep  2 23:56:13 2019] GET /static/axf/main/css/main.css => generated 77 bytes in 66 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 2)
+[pid: 1820|app: 0|req: 3/9] 127.0.0.1 () {42 vars in 830 bytes} [Mon Sep  2 23:56:13 2019] GET /static/js/jquery.js => generated 77 bytes in 44 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 1821|app: 0|req: 3/10] 127.0.0.1 () {42 vars in 844 bytes} [Mon Sep  2 23:56:13 2019] GET /static/axf/main/js/home.js => generated 77 bytes in 42 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 1821|app: 0|req: 3/11] 127.0.0.1 () {42 vars in 826 bytes} [Mon Sep  2 23:56:13 2019] GET /static/js/base.js => generated 77 bytes in 57 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 1821|app: 0|req: 3/12] 127.0.0.1 () {42 vars in 844 bytes} [Mon Sep  2 23:56:13 2019] GET /static/js/swiper.jquery.js => generated 77 bytes in 46 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 3)
+[pid: 1818|app: 0|req: 1/13] 127.0.0.1 () {42 vars in 837 bytes} [Mon Sep  2 23:56:13 2019] GET /static/js/bootstrap.js => generated 77 bytes in 33 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 1820|app: 0|req: 4/14] 127.0.0.1 () {42 vars in 827 bytes} [Mon Sep  2 23:56:13 2019] GET /static/js/base.js => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 3)
+[pid: 1821|app: 0|req: 4/15] 127.0.0.1 () {42 vars in 845 bytes} [Mon Sep  2 23:56:13 2019] GET /static/js/swiper.jquery.js => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 1)
+[pid: 1820|app: 0|req: 5/16] 127.0.0.1 () {42 vars in 845 bytes} [Mon Sep  2 23:56:13 2019] GET /static/axf/main/js/home.js => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 1819|app: 0|req: 4/17] 127.0.0.1 () {42 vars in 851 bytes} [Mon Sep  2 23:56:13 2019] GET /favicon.ico => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+gateway "uWSGI http 1" has been buried (pid: 1823)
+...brutally killing workers...
+gateway "uWSGI http 1" has been buried (pid: 965)
+...brutally killing workers...
+worker 8 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /Users/jason/env/Djgo/Djgo7/AXF
+closing all non-uwsgi socket fds > 2 (max_fd = 10240)...
+found fd 3 mapped to socket 0 (127.0.0.1:50918)
+running /Users/jason/.virtualenvs/Djgo/bin/uwsgi
+worker 8 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /Users/jason/env/Djgo/Djgo7/AXF
+closing all non-uwsgi socket fds > 2 (max_fd = 10240)...
+found fd 3 mapped to socket 0 (127.0.0.1:49229)
+running /Users/jason/.virtualenvs/Djgo/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Sep  3 00:47:09 2019] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 10.0.1 (clang-1001.0.46.4) on 02 September 2019 06:01:04
+os: Darwin-18.0.0 Darwin Kernel Version 18.0.0: Wed Aug 22 20:13:40 PDT 2018; root:xnu-4903.201.2~1/RELEASE_X86_64
+nodename: MacBook-Pro.local
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /Users/jason/env/Djgo/Djgo7/AXF
+detected binary path: /Users/jason/.virtualenvs/Djgo/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /Users/jason/env/Djgo/Djgo7/AXF
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 10240
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8001 fd 5
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Sep  3 00:47:09 2019] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 10.0.1 (clang-1001.0.46.4) on 02 September 2019 06:01:04
+os: Darwin-18.0.0 Darwin Kernel Version 18.0.0: Wed Aug 22 20:13:40 PDT 2018; root:xnu-4903.201.2~1/RELEASE_X86_64
+nodename: MacBook-Pro.local
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /Users/jason/env/Djgo/Djgo7/AXF
+detected binary path: /Users/jason/.virtualenvs/Djgo/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /Users/jason/env/Djgo/Djgo7/AXF
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 10240
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8001).
+bind(): Address already in use [core/socket.c line 769]
+uwsgi socket 0 bound to TCP address 127.0.0.1:51205 (port auto-assigned) fd 4
+Python version: 3.7.4 (default, Jul  9 2019, 18:13:23)  [Clang 10.0.1 (clang-1001.0.46.4)]
+Python main interpreter initialized at 0x7ffe5f40a240
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 937440 bytes (915 KB) for 32 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7ffe5f40a240 pid: 1789 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1789)
+spawned uWSGI worker 1 (pid: 2201, cores: 4)
+spawned uWSGI worker 2 (pid: 2202, cores: 4)
+spawned uWSGI worker 3 (pid: 2203, cores: 4)
+spawned uWSGI worker 4 (pid: 2204, cores: 4)
+spawned uWSGI worker 5 (pid: 2205, cores: 4)
+spawned uWSGI worker 6 (pid: 2206, cores: 4)
+spawned uWSGI worker 7 (pid: 2207, cores: 4)
+spawned uWSGI worker 8 (pid: 2208, cores: 4)
+spawned uWSGI http 1 (pid: 2209)
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Sep  3 00:55:00 2019] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 10.0.1 (clang-1001.0.46.4) on 02 September 2019 06:01:04
+os: Darwin-18.0.0 Darwin Kernel Version 18.0.0: Wed Aug 22 20:13:40 PDT 2018; root:xnu-4903.201.2~1/RELEASE_X86_64
+nodename: MacBook-Pro.local
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /Users/jason/env/Djgo/Djgo7/AXF
+writing pidfile to uwsgi.pid
+detected binary path: /Users/jason/.virtualenvs/Djgo/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /Users/jason/env/Djgo/Djgo7/AXF
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 10240
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8000 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:49176 (port auto-assigned) fd 3
+Python version: 3.7.4 (default, Jul  9 2019, 18:13:23)  [Clang 10.0.1 (clang-1001.0.46.4)]
+Python main interpreter initialized at 0x7fd857702650
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 937440 bytes (915 KB) for 32 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7fd857702650 pid: 760 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 760)
+spawned uWSGI worker 1 (pid: 788, cores: 4)
+spawned uWSGI worker 2 (pid: 789, cores: 4)
+spawned uWSGI worker 3 (pid: 790, cores: 4)
+spawned uWSGI worker 4 (pid: 791, cores: 4)
+spawned uWSGI worker 5 (pid: 792, cores: 4)
+spawned uWSGI worker 6 (pid: 793, cores: 4)
+spawned uWSGI worker 7 (pid: 794, cores: 4)
+spawned uWSGI worker 8 (pid: 795, cores: 4)
+spawned uWSGI http 1 (pid: 796)
+[pid: 792|app: 0|req: 1/1] 127.0.0.1 () {46 vars in 957 bytes} [Tue Sep  3 00:55:17 2019] GET /axf/home/ => generated 27 bytes in 206 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+[pid: 795|app: 0|req: 1/2] 127.0.0.1 () {42 vars in 851 bytes} [Tue Sep  3 00:55:17 2019] GET /favicon.ico => generated 77 bytes in 37 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 792|app: 0|req: 2/3] 127.0.0.1 () {46 vars in 964 bytes} [Tue Sep  3 00:55:20 2019] GET /axf/home/ => generated 27 bytes in 82 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 1)
+[pid: 792|app: 0|req: 3/4] 127.0.0.1 () {46 vars in 964 bytes} [Tue Sep  3 00:55:21 2019] GET /axf/home/ => generated 27 bytes in 76 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 2)
+[pid: 793|app: 0|req: 1/5] 127.0.0.1 () {46 vars in 964 bytes} [Tue Sep  3 00:55:21 2019] GET /axf/home/ => generated 27 bytes in 162 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+[pid: 793|app: 0|req: 2/6] 127.0.0.1 () {46 vars in 964 bytes} [Tue Sep  3 00:55:33 2019] GET /axf/home/ => generated 27 bytes in 96 msecs (HTTP/1.1 500) 4 headers in 126 bytes (2 switches on core 1)
+[pid: 791|app: 0|req: 1/7] 127.0.0.1 () {46 vars in 964 bytes} [Tue Sep  3 00:55:34 2019] GET /axf/home/ => generated 27 bytes in 173 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Sep  3 00:55:44 2019] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 10.0.1 (clang-1001.0.46.4) on 02 September 2019 06:01:04
+os: Darwin-18.0.0 Darwin Kernel Version 18.0.0: Wed Aug 22 20:13:40 PDT 2018; root:xnu-4903.201.2~1/RELEASE_X86_64
+nodename: MacBook-Pro.local
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /Users/jason/env/Djgo/Djgo7/AXF
+writing pidfile to uwsgi.pid
+detected binary path: /Users/jason/.virtualenvs/Djgo/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /Users/jason/env/Djgo/Djgo7/AXF
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 10240
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8001 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:49682 (port auto-assigned) fd 3
+Python version: 3.7.4 (default, Jul  9 2019, 18:13:23)  [Clang 10.0.1 (clang-1001.0.46.4)]
+Python main interpreter initialized at 0x7f8489801d90
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 937440 bytes (915 KB) for 32 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7f8489801d90 pid: 829 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 829)
+spawned uWSGI worker 1 (pid: 856, cores: 4)
+spawned uWSGI worker 2 (pid: 857, cores: 4)
+spawned uWSGI worker 3 (pid: 858, cores: 4)
+spawned uWSGI worker 4 (pid: 859, cores: 4)
+spawned uWSGI worker 5 (pid: 860, cores: 4)
+spawned uWSGI worker 6 (pid: 861, cores: 4)
+spawned uWSGI worker 7 (pid: 862, cores: 4)
+spawned uWSGI worker 8 (pid: 863, cores: 4)
+spawned uWSGI http 1 (pid: 864)
+[pid: 791|app: 0|req: 2/8] 127.0.0.1 () {46 vars in 963 bytes} [Tue Sep  3 00:55:55 2019] GET /axf/home/ => generated 27 bytes in 75 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 3)
+[pid: 789|app: 0|req: 1/9] 127.0.0.1 () {46 vars in 964 bytes} [Tue Sep  3 00:56:20 2019] GET /axf/home/ => generated 23753 bytes in 87 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 791|app: 0|req: 3/10] 127.0.0.1 () {42 vars in 856 bytes} [Tue Sep  3 00:56:20 2019] GET /static/css/bootstrap.css => generated 77 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 795|app: 0|req: 2/11] 127.0.0.1 () {42 vars in 864 bytes} [Tue Sep  3 00:56:20 2019] GET /static/axf/main/css/home.css => generated 77 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 793|app: 0|req: 3/13] 127.0.0.1 () {42 vars in 864 bytes} [Tue Sep  3 00:56:20 2019] GET /static/axf/main/css/main.css => generated 77 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 3)
+[pid: 792|app: 0|req: 4/13] 127.0.0.1 () {42 vars in 848 bytes} [Tue Sep  3 00:56:20 2019] GET /static/css/reset.css => generated 77 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 795|app: 0|req: 3/14] 127.0.0.1 () {42 vars in 850 bytes} [Tue Sep  3 00:56:20 2019] GET /static/css/swiper.css => generated 77 bytes in 8 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 793|app: 0|req: 4/15] 127.0.0.1 () {42 vars in 831 bytes} [Tue Sep  3 00:56:20 2019] GET /static/js/jquery.js => generated 77 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 792|app: 0|req: 5/16] 127.0.0.1 () {42 vars in 827 bytes} [Tue Sep  3 00:56:20 2019] GET /static/js/base.js => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 795|app: 0|req: 5/18] 127.0.0.1 () {42 vars in 845 bytes} [Tue Sep  3 00:56:20 2019] GET /static/js/swiper.jquery.js => generated 77 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 795|app: 0|req: 5/18] 127.0.0.1 () {42 vars in 845 bytes} [Tue Sep  3 00:56:20 2019] GET /static/axf/main/js/home.js => generated 77 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 794|app: 0|req: 1/19] 127.0.0.1 () {42 vars in 837 bytes} [Tue Sep  3 00:56:20 2019] GET /static/js/bootstrap.js => generated 77 bytes in 49 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 793|app: 0|req: 5/20] 127.0.0.1 () {42 vars in 827 bytes} [Tue Sep  3 00:56:20 2019] GET /static/js/base.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 789|app: 0|req: 2/21] 127.0.0.1 () {42 vars in 845 bytes} [Tue Sep  3 00:56:20 2019] GET /static/js/swiper.jquery.js => generated 77 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 794|app: 0|req: 2/22] 127.0.0.1 () {42 vars in 845 bytes} [Tue Sep  3 00:56:20 2019] GET /static/axf/main/js/home.js => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 789|app: 0|req: 3/23] 127.0.0.1 () {46 vars in 957 bytes} [Tue Sep  3 01:02:22 2019] GET /axf/home/ => generated 23753 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 2)
+[pid: 793|app: 0|req: 6/24] 127.0.0.1 () {44 vars in 880 bytes} [Tue Sep  3 01:02:22 2019] GET /static/css/bootstrap.css => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 792|app: 0|req: 6/25] 127.0.0.1 () {44 vars in 874 bytes} [Tue Sep  3 01:02:22 2019] GET /static/css/swiper.css => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 794|app: 0|req: 3/26] 127.0.0.1 () {44 vars in 872 bytes} [Tue Sep  3 01:02:22 2019] GET /static/css/reset.css => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 794|app: 0|req: 4/27] 127.0.0.1 () {44 vars in 888 bytes} [Tue Sep  3 01:02:22 2019] GET /static/axf/main/css/main.css => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 1)
+[pid: 789|app: 0|req: 4/28] 127.0.0.1 () {44 vars in 888 bytes} [Tue Sep  3 01:02:22 2019] GET /static/axf/main/css/home.css => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 793|app: 0|req: 9/29] 127.0.0.1 () {44 vars in 861 bytes} [Tue Sep  3 01:02:22 2019] GET /static/js/bootstrap.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 793|app: 0|req: 9/31] 127.0.0.1 () {44 vars in 851 bytes} [Tue Sep  3 01:02:22 2019] GET /static/js/base.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 0)
+[pid: 793|app: 0|req: 9/31] 127.0.0.1 () {44 vars in 855 bytes} [Tue Sep  3 01:02:22 2019] GET /static/js/jquery.js => generated 77 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 793|app: 0|req: 10/33] 127.0.0.1 () {44 vars in 869 bytes} [Tue Sep  3 01:02:22 2019] GET /static/js/swiper.jquery.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 795|app: 0|req: 6/33] 127.0.0.1 () {44 vars in 869 bytes} [Tue Sep  3 01:02:22 2019] GET /static/axf/main/js/home.js => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 862|app: 0|req: 1/1] 127.0.0.1 () {44 vars in 933 bytes} [Tue Sep  3 01:02:36 2019] GET /axf/home/ => generated 23753 bytes in 93 msecs (HTTP/1.1 200) 3 headers in 111 bytes (2 switches on core 0)
+[pid: 862|app: 0|req: 3/2] 127.0.0.1 () {42 vars in 850 bytes} [Tue Sep  3 01:02:37 2019] GET /static/css/swiper.css => generated 77 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 862|app: 0|req: 3/3] 127.0.0.1 () {42 vars in 864 bytes} [Tue Sep  3 01:02:37 2019] GET /static/axf/main/css/main.css => generated 77 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 2)
+[pid: 860|app: 0|req: 2/5] 127.0.0.1 () {42 vars in 856 bytes} [Tue Sep  3 01:02:37 2019] GET /static/css/bootstrap.css => generated 77 bytes in 43 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 860|app: 0|req: 2/5] 127.0.0.1 () {42 vars in 827 bytes} [Tue Sep  3 01:02:37 2019] GET /static/js/base.js => generated 77 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 860|app: 0|req: 3/6] 127.0.0.1 () {42 vars in 845 bytes} [Tue Sep  3 01:02:37 2019] GET /static/js/swiper.jquery.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 862|app: 0|req: 4/7] 127.0.0.1 () {42 vars in 845 bytes} [Tue Sep  3 01:02:37 2019] GET /static/axf/main/js/home.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 863|app: 0|req: 4/8] 127.0.0.1 () {42 vars in 831 bytes} [Tue Sep  3 01:02:37 2019] GET /static/js/jquery.js => generated 77 bytes in 54 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 2)
+[pid: 863|app: 0|req: 4/9] 127.0.0.1 () {42 vars in 848 bytes} [Tue Sep  3 01:02:37 2019] GET /static/css/reset.css => generated 77 bytes in 78 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 863|app: 0|req: 4/11] 127.0.0.1 () {42 vars in 837 bytes} [Tue Sep  3 01:02:37 2019] GET /static/js/bootstrap.js => generated 77 bytes in 43 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 863|app: 0|req: 4/11] 127.0.0.1 () {42 vars in 864 bytes} [Tue Sep  3 01:02:37 2019] GET /static/axf/main/css/home.css => generated 77 bytes in 79 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 860|app: 0|req: 4/12] 127.0.0.1 () {42 vars in 837 bytes} [Tue Sep  3 01:02:37 2019] GET /static/js/bootstrap.js => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 2)
+[pid: 861|app: 0|req: 1/13] 127.0.0.1 () {42 vars in 827 bytes} [Tue Sep  3 01:02:37 2019] GET /static/js/base.js => generated 77 bytes in 31 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 862|app: 0|req: 5/14] 127.0.0.1 () {42 vars in 845 bytes} [Tue Sep  3 01:02:37 2019] GET /static/js/swiper.jquery.js => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 863|app: 0|req: 5/15] 127.0.0.1 () {42 vars in 845 bytes} [Tue Sep  3 01:02:37 2019] GET /static/axf/main/js/home.js => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 3)
+[pid: 860|app: 0|req: 5/16] 127.0.0.1 () {42 vars in 851 bytes} [Tue Sep  3 01:02:37 2019] GET /favicon.ico => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+gateway "uWSGI http 1" has been buried (pid: 864)
+...brutally killing workers...
+gateway "uWSGI http 1" has been buried (pid: 796)
+...brutally killing workers...
+worker 8 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /Users/jason/env/Djgo/Djgo7/AXF
+closing all non-uwsgi socket fds > 2 (max_fd = 10240)...
+found fd 3 mapped to socket 0 (127.0.0.1:49682)
+worker 8 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /Users/jason/env/Djgo/Djgo7/AXF
+closing all non-uwsgi socket fds > 2 (max_fd = 10240)...
+found fd 3 mapped to socket 0 (127.0.0.1:49176)
+running /Users/jason/.virtualenvs/Djgo/bin/uwsgi
+running /Users/jason/.virtualenvs/Djgo/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Sep  3 01:03:02 2019] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 10.0.1 (clang-1001.0.46.4) on 02 September 2019 06:01:04
+os: Darwin-18.0.0 Darwin Kernel Version 18.0.0: Wed Aug 22 20:13:40 PDT 2018; root:xnu-4903.201.2~1/RELEASE_X86_64
+nodename: MacBook-Pro.local
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /Users/jason/env/Djgo/Djgo7/AXF
+detected binary path: /Users/jason/.virtualenvs/Djgo/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /Users/jason/env/Djgo/Djgo7/AXF
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 10240
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8001 fd 5
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Sep  3 01:03:02 2019] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 10.0.1 (clang-1001.0.46.4) on 02 September 2019 06:01:04
+os: Darwin-18.0.0 Darwin Kernel Version 18.0.0: Wed Aug 22 20:13:40 PDT 2018; root:xnu-4903.201.2~1/RELEASE_X86_64
+nodename: MacBook-Pro.local
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /Users/jason/env/Djgo/Djgo7/AXF
+detected binary path: /Users/jason/.virtualenvs/Djgo/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /Users/jason/env/Djgo/Djgo7/AXF
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 10240
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8001).
+bind(): Address already in use [core/socket.c line 769]
+uwsgi socket 0 bound to TCP address 127.0.0.1:50088 (port auto-assigned) fd 4
+Python version: 3.7.4 (default, Jul  9 2019, 18:13:23)  [Clang 10.0.1 (clang-1001.0.46.4)]
+Python main interpreter initialized at 0x7fcc5bd01c40
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 937440 bytes (915 KB) for 32 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7fcc5bd01c40 pid: 829 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 829)
+spawned uWSGI worker 1 (pid: 1013, cores: 4)
+spawned uWSGI worker 2 (pid: 1014, cores: 4)
+spawned uWSGI worker 3 (pid: 1015, cores: 4)
+spawned uWSGI worker 4 (pid: 1016, cores: 4)
+spawned uWSGI worker 5 (pid: 1017, cores: 4)
+spawned uWSGI worker 6 (pid: 1018, cores: 4)
+spawned uWSGI worker 7 (pid: 1019, cores: 4)
+spawned uWSGI worker 8 (pid: 1020, cores: 4)
+spawned uWSGI http 1 (pid: 1021)
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Sep  3 01:05:35 2019] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 10.0.1 (clang-1001.0.46.4) on 02 September 2019 06:01:04
+os: Darwin-18.0.0 Darwin Kernel Version 18.0.0: Wed Aug 22 20:13:40 PDT 2018; root:xnu-4903.201.2~1/RELEASE_X86_64
+nodename: MacBook-Pro.local
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /Users/jason/env/Djgo/Djgo7/AXF
+writing pidfile to uwsgi.pid
+detected binary path: /Users/jason/.virtualenvs/Djgo/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /Users/jason/env/Djgo/Djgo7/AXF
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 10240
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8000 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:49333 (port auto-assigned) fd 3
+Python version: 3.7.4 (default, Jul  9 2019, 18:13:23)  [Clang 10.0.1 (clang-1001.0.46.4)]
+Python main interpreter initialized at 0x7fc2ebf02360
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 937440 bytes (915 KB) for 32 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7fc2ebf02360 pid: 844 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 844)
+spawned uWSGI worker 1 (pid: 872, cores: 4)
+spawned uWSGI worker 2 (pid: 873, cores: 4)
+spawned uWSGI worker 3 (pid: 874, cores: 4)
+spawned uWSGI worker 4 (pid: 875, cores: 4)
+spawned uWSGI worker 5 (pid: 876, cores: 4)
+spawned uWSGI worker 6 (pid: 877, cores: 4)
+spawned uWSGI worker 7 (pid: 878, cores: 4)
+spawned uWSGI worker 8 (pid: 879, cores: 4)
+spawned uWSGI http 1 (pid: 880)
+[pid: 875|app: 0|req: 1/1] 127.0.0.1 () {44 vars in 945 bytes} [Tue Sep  3 01:05:59 2019] GET /axf/home/ => generated 23753 bytes in 104 msecs (HTTP/1.1 200) 3 headers in 111 bytes (2 switches on core 0)
+[pid: 875|app: 0|req: 2/2] 127.0.0.1 () {42 vars in 856 bytes} [Tue Sep  3 01:05:59 2019] GET /static/css/bootstrap.css => generated 77 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 873|app: 0|req: 1/3] 127.0.0.1 () {42 vars in 864 bytes} [Tue Sep  3 01:05:59 2019] GET /static/axf/main/css/home.css => generated 77 bytes in 48 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 0)
+[pid: 878|app: 0|req: 4/4] 127.0.0.1 () {42 vars in 831 bytes} [Tue Sep  3 01:05:59 2019] GET /static/js/jquery.js => generated 77 bytes in 60 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 3)
+[pid: 873|app: 0|req: 2/6] 127.0.0.1 () {42 vars in 845 bytes} [Tue Sep  3 01:05:59 2019] GET /static/js/swiper.jquery.js => generated 77 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 879|app: 0|req: 1/6] 127.0.0.1 () {42 vars in 837 bytes} [Tue Sep  3 01:05:59 2019] GET /static/js/bootstrap.js => generated 77 bytes in 47 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 878|app: 0|req: 4/8] 127.0.0.1 () {42 vars in 850 bytes} [Tue Sep  3 01:05:59 2019] GET /static/css/swiper.css => generated 77 bytes in 92 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 878|app: 0|req: 4/8] 127.0.0.1 () {42 vars in 864 bytes} [Tue Sep  3 01:05:59 2019] GET /static/axf/main/css/main.css => generated 77 bytes in 89 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 2)
+[pid: 878|app: 0|req: 4/9] 127.0.0.1 () {42 vars in 848 bytes} [Tue Sep  3 01:05:59 2019] GET /static/css/reset.css => generated 77 bytes in 92 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 876|app: 0|req: 1/10] 127.0.0.1 () {42 vars in 827 bytes} [Tue Sep  3 01:05:59 2019] GET /static/js/base.js => generated 77 bytes in 44 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 877|app: 0|req: 2/12] 127.0.0.1 () {42 vars in 837 bytes} [Tue Sep  3 01:05:59 2019] GET /static/js/bootstrap.js => generated 77 bytes in 44 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 877|app: 0|req: 2/12] 127.0.0.1 () {42 vars in 845 bytes} [Tue Sep  3 01:05:59 2019] GET /static/axf/main/js/home.js => generated 77 bytes in 46 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+gateway "uWSGI http 1" has been buried (pid: 880)
+...brutally killing workers...
+worker 8 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /Users/jason/env/Djgo/Djgo7/AXF
+closing all non-uwsgi socket fds > 2 (max_fd = 10240)...
+found fd 3 mapped to socket 0 (127.0.0.1:49333)
+running /Users/jason/.virtualenvs/Djgo/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Sep  3 02:26:38 2019] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 10.0.1 (clang-1001.0.46.4) on 02 September 2019 06:01:04
+os: Darwin-18.0.0 Darwin Kernel Version 18.0.0: Wed Aug 22 20:13:40 PDT 2018; root:xnu-4903.201.2~1/RELEASE_X86_64
+nodename: MacBook-Pro
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /Users/jason/env/Djgo/Djgo7/AXF
+detected binary path: /Users/jason/.virtualenvs/Djgo/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /Users/jason/env/Djgo/Djgo7/AXF
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 10240
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8000 fd 5
+uwsgi socket 0 bound to TCP address 127.0.0.1:50040 (port auto-assigned) fd 4
+Python version: 3.7.4 (default, Jul  9 2019, 18:13:23)  [Clang 10.0.1 (clang-1001.0.46.4)]
+Python main interpreter initialized at 0x7fd7a7c0a240
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 937440 bytes (915 KB) for 32 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7fd7a7c0a240 pid: 844 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 844)
+spawned uWSGI worker 1 (pid: 1127, cores: 4)
+spawned uWSGI worker 2 (pid: 1128, cores: 4)
+spawned uWSGI worker 3 (pid: 1129, cores: 4)
+spawned uWSGI worker 4 (pid: 1130, cores: 4)
+spawned uWSGI worker 5 (pid: 1131, cores: 4)
+spawned uWSGI worker 6 (pid: 1132, cores: 4)
+spawned uWSGI worker 7 (pid: 1133, cores: 4)
+spawned uWSGI worker 8 (pid: 1134, cores: 4)
+spawned uWSGI http 1 (pid: 1135)
