@@ -17,9 +17,10 @@ from django.contrib import admin
 from django.urls import path, include
 
 from AXF import settings
+from App.admin import site
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', site.urls),
     path('axf/', include(('App.urls', 'axf'), namespace='axf')),
 ]
 

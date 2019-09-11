@@ -1,5 +1,6 @@
 import secrets
 
+from alipay import AliPay
 from django.core.cache import cache
 
 from django.core.mail import send_mail
@@ -8,6 +9,7 @@ from django.shortcuts import render, redirect
 from django.template import loader
 from django.urls import reverse
 
+from AXF.settings import APP_PRIVATE_KEY, ALIPAY_PUBLIC_KEY, ALIPAY_APPID
 from App import order_status
 from App.models import MainWheel, MainNav, MainMustBuy, MainShop, MainMainShow, FoodType, Goods, UserModel, CarModel, \
     OrderModel, OrderGoods
@@ -57,7 +59,6 @@ def market(request):
 
 
 def market_with_params(request, categoryid, childcid, sort_rule):
-
     foodtypes = FoodType.objects.all()
 
     if childcid == ALL_TYPE:
@@ -380,7 +381,6 @@ def sub_to_cart(request):
 
 
 def change_cart_status(request):
-
     cartid = request.GET.get('cartid')
 
     carmodel = CarModel.objects.get(pk=cartid)
@@ -410,7 +410,6 @@ def change_cart_status(request):
 
 
 def change_carts_status(request):
-
     carts = request.GET.get('carts')
 
     cart_list = carts.split('#')
@@ -443,7 +442,6 @@ def change_carts_status(request):
 
 
 def calc_total(user_id):
-
     total_price = 0
 
     carmodels = CarModel.objects.filter(c_user_id=user_id).filter(c_goods_select=True)
@@ -455,7 +453,6 @@ def calc_total(user_id):
 
 
 def make_order(request):
-
     carts = request.GET.get('carts')
 
     cart_list = carts.split('#')
@@ -497,7 +494,6 @@ def make_order(request):
 
 
 def order_detail(request):
-
     order_id = request.GET.get('orderid')
 
     data = {}
@@ -509,7 +505,6 @@ def order_detail(request):
     for good in goods:
         total_price += good.o_goods_num * good.o_goods.price
     print(total_price)
-
 
     try:
         order = OrderModel.objects.get(pk=order_id)
@@ -524,7 +519,6 @@ def order_detail(request):
 
 
 def alipay_callback(request):
-
     order_no = request.GET.get('order_no')
 
     order = OrderModel.objects.get(pk=order_no)
@@ -546,7 +540,6 @@ def alipay_callback(request):
 #   订单列表类型 已付款 已下单 已发货
 
 def order_list(request):
-
     order_type = request.GET.get('order_type')
 
     user_id = request.session.get('user_id')
@@ -567,3 +560,32 @@ def order_list(request):
     }
 
     return render(request, 'main/order_list.html', context=data)
+
+
+def alipay(request):
+    # 构建支付
+    alipay_client = AliPay(
+        appid= ALIPAY_APPID,
+        app_notify_url=None,  # 默认回调url
+        app_private_key_string=APP_PRIVATE_KEY,
+        # 支付宝的公钥，验证支付宝回传消息使用，不是你自己的公钥,
+        alipay_public_key_string=ALIPAY_PUBLIC_KEY,
+        sign_type="RSA",  # RSA 或者 RSA2
+        debug=False  # 默认False
+    )
+
+    subject = 'macbookpro123'
+
+    # 发起支付请求
+    # 电脑网站支付，需要跳转到https://openapi.alipay.com/gateway.do? + order_string
+    order_string = alipay_client.api_alipay_trade_page_pay(
+        out_trade_no="111",
+        total_amount=10000,
+        subject=subject,
+        return_url="http://www.1000phone.com",
+        notify_url="http://www.1000phone.com"  # 可选, 不填则使用默认notify url
+    )
+
+    # 客户端操作
+
+    return redirect("https://openapi.alipaydev.com/gateway.do?" + order_string)

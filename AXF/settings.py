@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'i8p87q=_u3$j+g$jq852)euei6ebgn%2fz--9+h)4re3i%abm4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -153,3 +153,9 @@ EMAIL_POST = 25
 EMAIL_HOST_USER = 'carzylty@163.com'
 
 EMAIL_HOST_PASSWORD = 'lty13680'
+
+ALIPAY_APPID = '2016101300676570'
+
+APP_PRIVATE_KEY = open(os.path.join(BASE_DIR, 'alipay_config/app_rsa_private_key.txt'), 'r').read()
+
+ALIPAY_PUBLIC_KEY = open(os.path.join(BASE_DIR, 'alipay_config/alipay_rsa_public_key.txt'), 'r').read()

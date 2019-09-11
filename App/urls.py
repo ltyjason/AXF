@@ -22,4 +22,5 @@ urlpatterns = [
     path('orderdetail/', views.order_detail, name='order_detail'),
     path('alipaycallback/', views.alipay_callback, name='alipay_callback'),
     path('orderlist/', views.order_list, name='order_list'),
+    path('alipay/', views.alipay, name='alipay'),
 ]

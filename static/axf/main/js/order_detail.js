@@ -5,7 +5,7 @@ $(function () {
 
         $.getJSON('/axf/alipaycallback/', {'order_no': order_no}, function (data) {
             if(data['status'] == 200){
-                window.open('/axf/mine', target='_self');
+                window.open('/axf/alipay', target='_self');
             }
         })
     })
